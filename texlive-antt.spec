@@ -1,3 +1,9 @@
+# revision 18651
+# category Package
+# catalog-ctan /fonts/antt
+# catalog-date 2007-08-24 10:36:49 +0200
+# catalog-license gfsl
+# catalog-version 2.08
 Name:		texlive-antt
 Version:	2.08
 Release:	1
@@ -533,6 +539,7 @@ as as Type 1.
 %doc %{_texmfdistdir}/doc/fonts/antt/antt-mathtest.tex
 %doc %{_texmfdistdir}/doc/fonts/antt/antt-table.tex
 %doc %{_texmfdistdir}/doc/latex/antt/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -543,3 +550,5 @@ as as Type 1.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
