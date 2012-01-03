@@ -6,7 +6,7 @@
 # catalog-version 2.08
 Name:		texlive-antt
 Version:	2.08
-Release:	1
+Release:	2
 Summary:	Antykwa Torunska: a Type 1 family of a Polish traditional type
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/antt
