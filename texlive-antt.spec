@@ -540,3 +540,18 @@ as as Type 1.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.08-2
++ Revision: 749254
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.08-1
++ Revision: 717835
+- texlive-antt
+- texlive-antt
+- texlive-antt
+- texlive-antt
+- texlive-antt
+
