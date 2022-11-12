@@ -1,18 +1,12 @@
-# revision 18651
-# category Package
-# catalog-ctan /fonts/antt
-# catalog-date 2007-08-24 10:36:49 +0200
-# catalog-license gfsl
-# catalog-version 2.08
 Name:		texlive-antt
-Version:	2.08
-Release:	12
+Version:	18651
+Release:	1
 Summary:	Antykwa Torunska: a Type 1 family of a Polish traditional type
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/antt
 License:	GFSL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antt.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antt.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antt.r18651.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antt.doc.r18651.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ typographer Zygfryd Gardzielewski, reconstructed and digitized
 as as Type 1.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -533,25 +527,10 @@ as as Type 1.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.08-2
-+ Revision: 749254
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.08-1
-+ Revision: 717835
-- texlive-antt
-- texlive-antt
-- texlive-antt
-- texlive-antt
-- texlive-antt
-
